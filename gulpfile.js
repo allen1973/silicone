@@ -125,3 +125,24 @@ gulp.task('server', function() {
     gulp.watch('src/**/*').on('change', browserSync.reload);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+var customizeBootstrap = require('gulp-customize-bootstrap');//npm install --save-dev gulp-customize-bootstrap
+var less = require('gulp-less');
+
+gulp.task('compileBootstrap', function() {
+  return gulp.src('node_modules/bootstrap/less/bootstrap.less')
+    .pipe(customizeBootstrap('styles/less/*.less'))
+    .pipe(less())
+    .pipe(gulp.dest('styles/'));
+});
