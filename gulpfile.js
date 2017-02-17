@@ -16,7 +16,7 @@ var gulp = require("gulp"),//http://gulpjs.com/
 var sassFiles = "src/**/*.scss";
 var entryFile = "src/main.scss";
 
-
+var uncss = require('gulp-uncss');
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
@@ -53,6 +53,12 @@ gulp.task("default", ["sass", "watch"]);
 
 
 
+
+var gulp = require('gulp');
+var uncss = require('gulp-uncss');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var nano = require('gulp-cssnano');
 
 
 
